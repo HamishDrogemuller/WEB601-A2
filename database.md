@@ -1,29 +1,29 @@
 *Database Design Notes*
 
 Customer:
-ID - PK
-FirstName
-LastName
-Email
-TokenID
+CustomerID - PK - VAR30
+FirstName - VAR30
+LastName - VAR30
+Email - VAR30
+TokenID - VAR30
 
-Products:
-ID
-Name
-Price
-Type
+Product:
+ProductID - PK - VAR30
+Name - VAR30
+Price - INT
+TypeID - VAR30
 
 Type Table:
-ID
-Type Name
-Description
+TypeID - PK - VAR30
+Type Name - VAR30
+Description - VAR50
 
 Order:
-ID
-ProductID
-CustomerID
+OrderID - PK - VAR30
+ProductID - FK
+CustomerID - FK
 
 Token:
-TokenID
-CustomerID
-token
+TokenID - PK - VAR30
+CustomerID - FK
+Token - VAR30
