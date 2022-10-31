@@ -1,0 +1,20 @@
+{
+  "name": "web601-a2",
+  "version": "1.0.0",
+  "description": "Repo to store my WEB601 Assessment 2 work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamishDrogemuller/WEB601-A2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HamishDrogemuller/WEB601-A2/issues"
+  },
+  "homepage": "https://github.com/HamishDrogemuller/WEB601-A2#readme"
+}
