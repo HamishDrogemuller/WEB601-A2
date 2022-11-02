@@ -45,7 +45,7 @@ router.post('/register', async(req, res) => {
     {
         try
         {
-            await db.promise().query(`Insert Into tblCustomer (username, firstName, lastName, email, userPassword,) VALUES ('${Username}', '${firstName}', '${lastName}', '${email}', '${userPassword}')`);
+            await db.promise().query(`Insert Into tblCustomer (Username, firstName, lastName, email, userPassword) VALUES ('${Username}', '${firstName}', '${lastName}', '${email}', '${userPassword}')`);
             res.status(200).send({message: 'Registration Successful'});
         }
         catch(err)
