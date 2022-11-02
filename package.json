@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/HamishDrogemuller/WEB601-A2/issues"
   },
-  "homepage": "https://github.com/HamishDrogemuller/WEB601-A2#readme"
+  "homepage": "https://github.com/HamishDrogemuller/WEB601-A2#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
 }
