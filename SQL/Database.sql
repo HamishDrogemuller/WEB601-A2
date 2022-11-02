@@ -30,11 +30,12 @@ Begin
     
     -- Create tblCustomer
     Create Table tblCustomer(
-		CustomerID Int Not Null Primary Key,
+		CustomerID Int Not Null Primary Key Auto_Increment,
+        Username Varchar(50) Not Null,
         FirstName Varchar(50) Not Null,
         LastName Varchar(50) Not Null,
         Email Varchar(50) Unique Not Null,
-        `Password` Varchar(50) Not Null,
+        userPassword Varchar(50) Not Null,
         `Admin` Bool Default False Not Null
         );
         
@@ -81,6 +82,8 @@ Begin
 		OrderItemsID Int Not Null Primary Key,
         OrderID Int,
         ProductID Int,
+        Quantity Int,
+        OrderTotal Int,
         Created_At Timestamp,
         Modified_At timestamp
         );
@@ -88,6 +91,7 @@ Begin
 	Create Table tblProduct(
 		ProductID Int Not Null Primary Key,
         ProductName Varchar(255),
+        ProductDescription Varchar(255),
         Price Int,
         TypeID int
         );
@@ -129,3 +133,27 @@ End //
 Delimiter ;
 
 Call Generate();
+
+-- Drop Procedure 
+Drop Procedure If Exists Populate;
+
+Delimiter //
+-- Create Populating Procedure
+Create Procedure Populate()
+Begin
+
+Insert Into tblCustomer (Username, firstName, lastName, email, userPassword)
+Values
+('Strix', 'Hamish', 'Drogemuller', 'test@gmail.com', 'Tester'),
+('Matt', 'Matt', 'Burty', 'c++@gmail.com', 'Hardware');
+
+
+
+
+
+
+End //
+
+Delimiter ;
+
+Call Populate();
