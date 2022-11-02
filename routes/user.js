@@ -80,6 +80,29 @@ router.delete('/deleteAccount', async(req, res) => {
         {
             res.status(418).send({message: 'Please enter a customer ID'});
         }
-    });
+});
+
+//Update
+router.put('/update', async(req, res) => {
+
+    const {Username,  firstName, lastName, email, userPassword,} = req.body;
+
+    if(Username &&  firstName && lastName && email && userPassword )
+    {
+        try
+        {
+            await db.promise().query(`Update tblCustomer Set username = '${Username}', firstName = '${firstName}', lastName = '${lastName}', email = '${email}', userPassword = '${userPassword}'`);
+            res.status(200).send({message: 'Update Successful'});
+        }
+        catch(err)
+        {
+            res.status(500).send({message: 'Error Updating'});
+        }
+    }
+    else
+    {
+        res.status(418).send({message: 'Please enter all fields'});
+    }
+});
 
 module.exports = router;

@@ -19,10 +19,17 @@
   },
   "homepage": "https://github.com/HamishDrogemuller/WEB601-A2#readme",
   "dependencies": {
+    "bootstrap": "^5.2.2",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "fontawesome": "^5.6.3",
+    "http": "^0.0.1-security",
+    "jquery": "^3.6.1",
+    "magnific-popup": "^1.1.0",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "owlcarousel": "^1.3.3",
+    "slicknav": "^1.0.8"
   }
 }

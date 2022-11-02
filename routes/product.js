@@ -69,7 +69,7 @@ router.put('/updateProduct', (req, res) => {
     }
 });
 
-//Get Product
+//Search Product
 router.get('/getProduct', (req, res) => {
     const {ProductID} = req.body;
 
@@ -90,5 +90,6 @@ router.get('/getProduct', (req, res) => {
         res.status(418).send({message: 'Please enter a product ID'});
     }
 });
+
 
 module.exports = router;

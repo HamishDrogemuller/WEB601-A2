@@ -2,6 +2,9 @@
 const express = require('express');
 const session = require('express-session');
 
+//Import http module
+const http = require("http");
+
 // Import Routes
 const order = require('./routes/order');
 const product = require('./routes/product');
@@ -21,6 +24,13 @@ app.use(session({
     saveUninitialized: true,
     store: store
 }));
+
+//Home
+
+app.get("/", (req, res) => {
+    //res.send("Welcome to the Store");
+    res.sendFile(__dirname + "/src/index.html");
+})
 
 // Configure Routes
 app.use('/order', order);
