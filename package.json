@@ -4,7 +4,8 @@
   "description": "Repo to store my WEB601 Assessment 2 work",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/HamishDrogemuller/WEB601-A2#readme",
   "dependencies": {
-    "mysql2": "^2.3.3"
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
   }
 }
